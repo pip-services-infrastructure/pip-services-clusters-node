@@ -1,0 +1,6 @@
+{
+  "name": "pip-services-clusters-node",
+  "registry": "registry.gitlab.com/iqs-services",
+  "version": "1.0.0",
+  "build": 9
+}
