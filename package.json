@@ -1,5 +1,5 @@
 {
-    "name": "@iquipsys/pip-services-clusters-node",
+    "name": "pip-services-clusters-node",
     "version": "1.0.0",
     "author": "Conceptual Vision Consulting LLC",
     "description": "Clusters microservice in Node.js",
@@ -12,15 +12,13 @@
     "main": "./obj/src/index.js",
     "typings": "./obj/src/index.d.ts",
     "keywords": [
-        "iquipsys",
-        "tracker",
         "cluster",
         "microservice"
     ],
     "noAnalyze": true,
     "repository": {
         "type": "git",
-        "url": "git@gitlab.com:iqs-services/pip-services-clusters-node.git"
+        "url": "https://github.com/pip-services-infrastructure/pip-services-clusters-node.git"
     },
     "license": "MIT",
     "engines": {
