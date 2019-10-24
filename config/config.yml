@@ -2,7 +2,7 @@
 # Container descriptor
 - descriptor: "pip-services:context-info:default:default:1.0"
   name: "pip-services-clusters"
-  description: "Clusters microservice for iQuipsys Positron"
+  description: "Clusters microservice"
 
 # Console logger
 - descriptor: "pip-services:logger:console:default:1.0"
