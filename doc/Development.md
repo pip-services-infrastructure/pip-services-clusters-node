@@ -1,4 +1,4 @@
-# Development and Testing Guide <br/> Email Delivery Microservice
+# Development and Testing Guide <br/> Clusters service Microservice
 
 This document provides high-level instructions on how to build and test the microservice.
 
