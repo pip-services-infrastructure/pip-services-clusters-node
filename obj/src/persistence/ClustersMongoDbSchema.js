@@ -21,7 +21,7 @@ exports.ClustersMongoDbSchema = function (collection) {
         version: { type: String, required: false },
         update_time: { type: Date, required: false },
         /* Tenants allocation */
-        max_tenants_count: { type: Number, required: false },
+        max_tenant_count: { type: Number, required: false },
         tenants_count: { type: Number, required: false },
         open: { type: Boolean, required: false },
         active_tenants: { type: [String], required: false },

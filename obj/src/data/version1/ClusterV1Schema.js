@@ -19,7 +19,7 @@ class ClusterV1Schema extends pip_services_commons_node_1.ObjectSchema {
         this.withOptionalProperty('maintenance', pip_services_commons_node_4.TypeCode.Boolean);
         this.withOptionalProperty('version', pip_services_commons_node_4.TypeCode.String);
         this.withOptionalProperty('update_time', null); //TypeCode.Date);
-        this.withOptionalProperty('max_tenants_count', pip_services_commons_node_4.TypeCode.Integer);
+        this.withOptionalProperty('max_tenant_count ', pip_services_commons_node_4.TypeCode.Integer);
         this.withOptionalProperty('tenants_count', pip_services_commons_node_4.TypeCode.Integer);
         this.withOptionalProperty('open', pip_services_commons_node_4.TypeCode.Boolean);
         this.withOptionalProperty('active_tenants', new pip_services_commons_node_3.ArraySchema(pip_services_commons_node_4.TypeCode.String));

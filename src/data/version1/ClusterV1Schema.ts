@@ -22,7 +22,7 @@ export class ClusterV1Schema extends ObjectSchema {
         this.withOptionalProperty('version', TypeCode.String);
         this.withOptionalProperty('update_time', null); //TypeCode.Date);
 
-        this.withOptionalProperty('max_tenants_count', TypeCode.Integer);
+        this.withOptionalProperty('max_tenant_count ', TypeCode.Integer);
         this.withOptionalProperty('tenants_count', TypeCode.Integer);
         this.withOptionalProperty('open', TypeCode.Boolean);
         this.withOptionalProperty('active_tenants', new ArraySchema(TypeCode.String));

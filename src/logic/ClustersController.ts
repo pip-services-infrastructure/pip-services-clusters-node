@@ -64,14 +64,14 @@ export class ClustersController implements IConfigurable, IReferenceable, IComma
         cluster.id = cluster.id || IdGenerator.nextLong();
         cluster.update_time = cluster.update_time || new Date();
         cluster.active = cluster.active != null ? cluster.active : true;
-        cluster.open = cluster.max_tenants_count > cluster.tenants_count;
+        cluster.open = cluster.max_tenant_count > cluster.tenants_count;
 
         this._persistence.create(correlationId, cluster, callback);
     }
 
     public updateCluster(correlationId: string, cluster: ClusterV1,
         callback: (err: any, cluster: ClusterV1) => void): void {
-        cluster.open = cluster.max_tenants_count > cluster.tenants_count;
+        cluster.open = cluster.max_tenant_count > cluster.tenants_count;
         this._persistence.update(correlationId, cluster, callback);
     }
 
@@ -135,7 +135,7 @@ export class ClustersController implements IConfigurable, IReferenceable, IComma
                 cluster.active_tenants = cluster.active_tenants || [];
                 cluster.active_tenants.push(tenantId);
                 cluster.tenants_count++;
-                cluster.open = cluster.max_tenants_count > cluster.tenants_count;
+                cluster.open = cluster.max_tenant_count > cluster.tenants_count;
 
                 this._persistence.update(correlationId, cluster, callback);
             }
@@ -177,7 +177,7 @@ export class ClustersController implements IConfigurable, IReferenceable, IComma
 
                 cluster.active_tenants = _.filter(cluster.active_tenants, s => s != tenantId);
                 cluster.tenants_count--;
-                cluster.open = cluster.max_tenants_count > cluster.tenants_count;
+                cluster.open = cluster.max_tenant_count > cluster.tenants_count;
 
                 this._persistence.update(correlationId, cluster, callback);
             }

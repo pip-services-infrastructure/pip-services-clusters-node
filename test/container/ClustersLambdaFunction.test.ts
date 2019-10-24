@@ -19,7 +19,7 @@ let CLUSTER1: ClusterV1 = {
     active: true,
     api_host: 'api.mycluster1.com',
     service_ports: { myservice1: 30001, myservice2: 30002 },
-    max_tenants_count: 1,
+    max_tenant_count : 1,
     tenants_count: 1,
     active_tenants: ['1']
 };
@@ -30,7 +30,7 @@ let CLUSTER2: ClusterV1 = {
     active: true,
     api_host: 'api.mycluster2.com',
     service_ports: { myservice1: 30001, myservice2: 30002 },
-    max_tenants_count: 10,
+    max_tenant_count : 10,
     tenants_count: 4,
     active_tenants: ['2', '3'],
     inactive_tenants: ['4']

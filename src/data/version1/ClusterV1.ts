@@ -17,7 +17,7 @@ export class ClusterV1 implements IStringIdentifiable {
     public version?: string;
     public update_time?: Date;
 
-    public max_tenants_count?: number;
+    public max_tenant_count ?: number;
     public tenants_count?: number;
     public open?: boolean;
     public active_tenants?: string[];

@@ -35,11 +35,11 @@ class ClustersController {
         cluster.id = cluster.id || pip_services_commons_node_4.IdGenerator.nextLong();
         cluster.update_time = cluster.update_time || new Date();
         cluster.active = cluster.active != null ? cluster.active : true;
-        cluster.open = cluster.max_tenants_count > cluster.tenants_count;
+        cluster.open = cluster.max_tenant_count > cluster.tenants_count;
         this._persistence.create(correlationId, cluster, callback);
     }
     updateCluster(correlationId, cluster, callback) {
-        cluster.open = cluster.max_tenants_count > cluster.tenants_count;
+        cluster.open = cluster.max_tenant_count > cluster.tenants_count;
         this._persistence.update(correlationId, cluster, callback);
     }
     deleteClusterById(correlationId, id, callback) {
@@ -89,7 +89,7 @@ class ClustersController {
                 cluster.active_tenants = cluster.active_tenants || [];
                 cluster.active_tenants.push(tenantId);
                 cluster.tenants_count++;
-                cluster.open = cluster.max_tenants_count > cluster.tenants_count;
+                cluster.open = cluster.max_tenant_count > cluster.tenants_count;
                 this._persistence.update(correlationId, cluster, callback);
             }
         ], (err) => {
@@ -120,7 +120,7 @@ class ClustersController {
                 }
                 cluster.active_tenants = _.filter(cluster.active_tenants, s => s != tenantId);
                 cluster.tenants_count--;
-                cluster.open = cluster.max_tenants_count > cluster.tenants_count;
+                cluster.open = cluster.max_tenant_count > cluster.tenants_count;
                 this._persistence.update(correlationId, cluster, callback);
             }
         ], (err) => {

@@ -13,7 +13,7 @@ export declare class ClusterV1 implements IStringIdentifiable {
     maintenance?: boolean;
     version?: string;
     update_time?: Date;
-    max_tenants_count?: number;
+    max_tenant_count?: number;
     tenants_count?: number;
     open?: boolean;
     active_tenants?: string[];
