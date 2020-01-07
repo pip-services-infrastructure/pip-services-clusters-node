@@ -1,4 +1,4 @@
-import { ConfigParams } from 'pip-services-commons-node';
+import { ConfigParams } from 'pip-services3-commons-node';
 
 import { ClustersFilePersistence } from '../../src/persistence/ClustersFilePersistence';
 import { ClustersPersistenceFixture } from './ClustersPersistenceFixture';

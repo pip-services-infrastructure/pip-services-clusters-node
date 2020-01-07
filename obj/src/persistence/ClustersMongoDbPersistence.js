@@ -1,15 +1,14 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 let _ = require('lodash');
-const pip_services_commons_node_1 = require("pip-services-commons-node");
-const pip_services_mongodb_node_1 = require("pip-services-mongodb-node");
-const ClustersMongoDbSchema_1 = require("./ClustersMongoDbSchema");
-class ClustersMongoDbPersistence extends pip_services_mongodb_node_1.IdentifiableMongoDbPersistence {
+const pip_services3_commons_node_1 = require("pip-services3-commons-node");
+const pip_services3_mongodb_node_1 = require("pip-services3-mongodb-node");
+class ClustersMongoDbPersistence extends pip_services3_mongodb_node_1.IdentifiableMongoDbPersistence {
     constructor() {
-        super('clusters', ClustersMongoDbSchema_1.ClustersMongoDbSchema());
+        super('clusters');
     }
     composeFilter(filter) {
-        filter = filter || new pip_services_commons_node_1.FilterParams();
+        filter = filter || new pip_services3_commons_node_1.FilterParams();
         let criteria = [];
         let search = filter.getAsNullableString('search');
         if (search != null) {

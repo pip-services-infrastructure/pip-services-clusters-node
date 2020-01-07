@@ -1,4 +1,4 @@
-import { CommandSet } from 'pip-services-commons-node';
+import { CommandSet } from 'pip-services3-commons-node';
 import { IClustersController } from './IClustersController';
 export declare class ClustersCommandSet extends CommandSet {
     private _logic;

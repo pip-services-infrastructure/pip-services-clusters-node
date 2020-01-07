@@ -1,18 +1,17 @@
 let _ = require('lodash');
 
-import { FilterParams } from 'pip-services-commons-node';
-import { PagingParams } from 'pip-services-commons-node';
-import { DataPage } from 'pip-services-commons-node';
-import { IdentifiableMongoDbPersistence } from 'pip-services-mongodb-node';
+import { FilterParams } from 'pip-services3-commons-node';
+import { PagingParams } from 'pip-services3-commons-node';
+import { DataPage } from 'pip-services3-commons-node';
+import { IdentifiableMongoDbPersistence } from 'pip-services3-mongodb-node';
 
 import { ClusterV1 } from '../data/version1/ClusterV1';
 import { IClustersPersistence } from './IClustersPersistence';
-import { ClustersMongoDbSchema } from './ClustersMongoDbSchema';
 
 export class ClustersMongoDbPersistence extends IdentifiableMongoDbPersistence<ClusterV1, string> implements IClustersPersistence {
 
     constructor() {
-        super('clusters', ClustersMongoDbSchema());
+        super('clusters');
     }
     
     private composeFilter(filter: FilterParams) {

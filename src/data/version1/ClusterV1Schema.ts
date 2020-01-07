@@ -1,7 +1,7 @@
-import { ObjectSchema } from 'pip-services-commons-node';
-import { MapSchema } from 'pip-services-commons-node';
-import { ArraySchema } from 'pip-services-commons-node';
-import { TypeCode } from 'pip-services-commons-node';
+import { ObjectSchema } from 'pip-services3-commons-node';
+import { MapSchema } from 'pip-services3-commons-node';
+import { ArraySchema } from 'pip-services3-commons-node';
+import { TypeCode } from 'pip-services3-commons-node';
 
 export class ClusterV1Schema extends ObjectSchema {
     public constructor() {
@@ -20,7 +20,7 @@ export class ClusterV1Schema extends ObjectSchema {
 
         this.withOptionalProperty('maintenance', TypeCode.Boolean);
         this.withOptionalProperty('version', TypeCode.String);
-        this.withOptionalProperty('update_time', null); //TypeCode.Date);
+        this.withOptionalProperty('update_time', TypeCode.DateTime);
 
         this.withOptionalProperty('max_tenant_count ', TypeCode.Integer);
         this.withOptionalProperty('tenants_count', TypeCode.Integer);

@@ -3,9 +3,9 @@ let async = require('async');
 let restify = require('restify');
 let assert = require('chai').assert;
 
-import { ConfigParams } from 'pip-services-commons-node';
-import { Descriptor } from 'pip-services-commons-node';
-import { References } from 'pip-services-commons-node';
+import { ConfigParams } from 'pip-services3-commons-node';
+import { Descriptor } from 'pip-services3-commons-node';
+import { References } from 'pip-services3-commons-node';
 
 import { ClusterV1 } from '../../../src/data/version1/ClusterV1';
 import { ClustersMemoryPersistence } from '../../../src/persistence/ClustersMemoryPersistence';
